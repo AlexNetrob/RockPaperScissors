@@ -32,3 +32,29 @@ function playRound (playerChoice = prompt("rock, paper, scissors?"), computer = 
 
 }
 
+function game() {
+
+    let playerScore = 0;
+    let computerScore = 0;
+
+    for (let i = 0; i < 5; i++) {
+        let gameResoult = playRound();
+        
+        if (gameResoult === "you won!") {
+            playerScore += 1;
+        } else if (gameResoult === "you loose!") {
+            computerScore += 1;
+        } else {
+
+        }
+    }
+    if (playerScore > computerScore) {
+        console.log("RESUTLS: " + playerScore + " to " + computerScore + " - You won!!!");
+    } else if (computerScore > playerScore) {
+        console.log("RESUTLS: " + playerScore + " to " + computerScore + " - Computer won!!!");
+    } else {
+        console.log("RESUTLS: " + playerScore + " to " + computerScore + " - It's a tie");
+    }
+    
+
+}
